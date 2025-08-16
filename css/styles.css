@@ -433,8 +433,6 @@ img {
 .input-parent {
   position: relative;
 }
-.modal-form-input {
-}
 .input-icon {
   position: absolute;
   top: 50%;
@@ -471,6 +469,7 @@ img {
   padding-left: 38px;
   background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
 }
 .input-block-comment {
   margin-bottom: 16px;
@@ -491,6 +490,11 @@ img {
   letter-spacing: 0.04em;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgba(46, 47, 66, 0.4);
+}
+.modal-form-input-comment:checked,
+.modal-form-input:checked {
+  border: none;
 }
 .modal-form-input-comment::placeholder {
   color: rgba(46, 47, 66, 0.4);
@@ -522,7 +526,6 @@ img {
 }
 .checkbox:checked + .privacy-policy-label > .check {
   fill: #f4f4fd;
-  border: none;
   border-radius: 2px;
   background-color: #404bbf;
   border: 1px solid #404bbf;
