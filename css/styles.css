@@ -371,8 +371,6 @@ img {
   align-items: center;
 }
 .modal {
-  display: flex;
-  flex-direction: column;
   max-width: 408px;
   max-height: 584px;
   border-radius: 4px;
@@ -420,7 +418,6 @@ img {
   margin-bottom: 16px;
 }
 .input-block {
-  width: 100%;
 }
 .modal-form-label {
 }
@@ -431,8 +428,8 @@ img {
 }
 .input-icon {
   position: absolute;
-  top: 14px;
-  left: 19px;
+  top: 8px;
+  left: 16px;
   fill: #2e2f42;
 }
 .modal-form-input:hover,
@@ -462,15 +459,17 @@ img {
   margin-bottom: 8px;
   padding-left: 38px;
 }
-.modal-form-input.comment {
+.modal-form-input-comment {
   width: 100%;
   height: 120px;
   padding-top: 8px;
   padding-left: 16px;
-  margin-bottom: 16px;
   resize: none;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  margin-bottom: 16px;
 }
-.modal-form-input.comment::placeholder {
+.modal-form-input-comment::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
@@ -479,8 +478,6 @@ img {
   color: rgba(46, 47, 66, 0.4);
 }
 .privacy-policy {
-  display: flex;
-  gap: 8px;
   margin-bottom: 24px;
 }
 .privacy-policy-label {
@@ -497,9 +494,29 @@ img {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  fill: transparent;
 }
-.check-icon {
-  fill: black;
+.checkbox:checked + .privacy-policy-label > .check {
+  fill: #f4f4fd;
+  border-radius: 2px;
+  background-color: #404bbf;
+  border: 1px solid #404bbf;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .privacy-policy-link {
@@ -524,12 +541,12 @@ img {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
   border: #4d5ae5;
-  /* margin: 0 auto; */
+  display: block;
+  margin: 0 auto;
 }
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background-color: #404bbf;
 }
 
 .footer {
